@@ -1,0 +1,91 @@
+\hypertarget{class_graph}{}\section{Класс Graph}
+\label{class_graph}\index{Graph@{Graph}}
+
+
+Сокращенная упорядоченная бинарная диаграмма решений, представленная в виде графа  
+
+
+
+
+{\ttfamily \#include $<$graph.\+h$>$}
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph} ()
+\begin{DoxyCompactList}\small\item\em Инициализация ключевых узлов БДР (0-\/терминальный узел, 1-\/терминальный узел, корень диаграммы) \end{DoxyCompactList}\item 
+\hyperlink{class_graph_a902c5b3eacb66d60752525ab23297a95}{$\sim$\+Graph} ()
+\begin{DoxyCompactList}\small\item\em Удаление диаграммы \end{DoxyCompactList}\item 
+void \hyperlink{class_graph_a675ba6677488ad224ff32d0fde0644c5}{build\+Bdd} (int values, int variables)
+\begin{DoxyCompactList}\small\item\em Построение БДР булевой функции \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Сокращенная упорядоченная бинарная диаграмма решений, представленная в виде графа 
+
+\begin{DoxyAuthor}{Автор}
+Александр Митюнин 
+\end{DoxyAuthor}
+
+
+\subsection{Конструктор(ы)}
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{Graph()}{Graph()}}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+::\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{}\label{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}
+
+
+Инициализация ключевых узлов БДР (0-\/терминальный узел, 1-\/терминальный узел, корень диаграммы) 
+
+\begin{DoxyAuthor}{Автор}
+Александр Митюнин 
+\end{DoxyAuthor}
+\index{Graph@{Graph}!````~Graph@{$\sim$\+Graph}}
+\index{````~Graph@{$\sim$\+Graph}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{$\sim$\+Graph()}{~Graph()}}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+::$\sim$\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graph_a902c5b3eacb66d60752525ab23297a95}{}\label{class_graph_a902c5b3eacb66d60752525ab23297a95}
+
+
+Удаление диаграммы 
+
+\begin{DoxyRefDesc}{Необходимо сделать}
+\item[\hyperlink{todo__todo000002}{Необходимо сделать}]Реализовать алгоритм поиска связей с логическими 0 и 1 и их удаления (прим.\+: эффективность не в приоритете! нужен сам алгоритм!) \end{DoxyRefDesc}
+
+
+\subsection{Методы}
+\index{Graph@{Graph}!build\+Bdd@{build\+Bdd}}
+\index{build\+Bdd@{build\+Bdd}!Graph@{Graph}}
+\subsubsection[{\texorpdfstring{build\+Bdd(int values, int variables)}{buildBdd(int values, int variables)}}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+::build\+Bdd (
+\begin{DoxyParamCaption}
+\item[{int}]{values, }
+\item[{int}]{variables}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graph_a675ba6677488ad224ff32d0fde0644c5}{}\label{class_graph_a675ba6677488ad224ff32d0fde0644c5}
+
+
+Построение БДР булевой функции 
+
+\begin{DoxyAuthor}{Автор}
+Александр Митюнин 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Аргументы}
+{\em values} & Вектор значений функции в форме машинного слова \\
+\hline
+{\em variables} & Количество переменных функции\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Необходимо сделать}
+\item[\hyperlink{todo__todo000003}{Необходимо сделать}]Написать функцию \end{DoxyRefDesc}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Alexander/\+Documents/\+B\+D\+D\+\_\+education/graph.\+h\item 
+C\+:/\+Users/\+Alexander/\+Documents/\+B\+D\+D\+\_\+education/graph.\+cpp\end{DoxyCompactItemize}

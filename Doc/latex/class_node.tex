@@ -1,0 +1,205 @@
+\hypertarget{class_node}{}\section{Класс Node}
+\label{class_node}\index{Node@{Node}}
+
+
+Узел БДР  
+
+
+
+
+{\ttfamily \#include $<$node.\+h$>$}
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_node_ad7a34779cad45d997bfd6d3d8043c75f}{Node} ()\hypertarget{class_node_ad7a34779cad45d997bfd6d3d8043c75f}{}\label{class_node_ad7a34779cad45d997bfd6d3d8043c75f}
+
+\begin{DoxyCompactList}\small\item\em Создает узел без пометки и без связей \end{DoxyCompactList}\item 
+\hyperlink{class_node_a184f393e8d61eea5e10fd6794cbd9c8d}{Node} (Q\+String \+\_\+data, \hyperlink{class_node}{Node} $\ast$low, \hyperlink{class_node}{Node} $\ast$high)
+\begin{DoxyCompactList}\small\item\em Создает узел с заданными пометкой и связями \end{DoxyCompactList}\item 
+\hyperlink{class_node_aa0840c3cb5c7159be6d992adecd2097c}{$\sim$\+Node} ()
+\begin{DoxyCompactList}\small\item\em Удаляет узел и связанные с ним узлы \end{DoxyCompactList}\item 
+Q\+String \hyperlink{class_node_ab3be314a19ff6049d0ab528ef3122139}{get\+Data} ()
+\begin{DoxyCompactList}\small\item\em Возвращает строку, содержащую пометку узла \end{DoxyCompactList}\item 
+void \hyperlink{class_node_a4ec7f6f38e67963aed6759a782db25a1}{set\+Data} (Q\+String \+\_\+data)
+\begin{DoxyCompactList}\small\item\em Изменяет пометку узла на заданную \end{DoxyCompactList}\item 
+void \hyperlink{class_node_afd304ef1773b4ee5e75e826c4b7b57b0}{set\+Low\+Connection} (\hyperlink{class_node}{Node} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Задает адрес младшего потомка \end{DoxyCompactList}\item 
+void \hyperlink{class_node_ab8a35e02d194a5f378120db368a22ded}{set\+Low\+Connection} (Q\+String \+\_\+data)
+\begin{DoxyCompactList}\small\item\em Создает узел с заданной пометкой без связей и назначает его младшим потомком \end{DoxyCompactList}\item 
+void \hyperlink{class_node_a77ee961e6ac046ecc4f52e2cea94ad19}{set\+High\+Connection} (\hyperlink{class_node}{Node} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Задает адрес старшего потомка \end{DoxyCompactList}\item 
+void \hyperlink{class_node_a14d42baec35f7dcbe6273fb4e91132e3}{set\+High\+Connection} (Q\+String \+\_\+data)
+\begin{DoxyCompactList}\small\item\em Создает узел с заданной пометкой без связей и назначает его старшим потомком \end{DoxyCompactList}\item 
+\hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_abf9a87b58ca04ff3c730e2097eee6f19}{get\+High} ()
+\begin{DoxyCompactList}\small\item\em Возвращает указатель на старшего потомка \end{DoxyCompactList}\item 
+\hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_adf1eae3c27b3b6fb038f2a677743e4c3}{get\+Low} ()
+\begin{DoxyCompactList}\small\item\em Возвращает указатель на младшего потомка \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Узел БДР 
+
+\begin{DoxyAuthor}{Автор}
+Александр Митюнин 
+\end{DoxyAuthor}
+
+
+\subsection{Конструктор(ы)}
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{Node(\+Q\+String \+\_\+data, Node $\ast$low, Node $\ast$high)}{Node(QString _data, Node *low, Node *high)}}]{\setlength{\rightskip}{0pt plus 5cm}Node\+::\+Node (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{\+\_\+data, }
+\item[{{\bf Node} $\ast$}]{low, }
+\item[{{\bf Node} $\ast$}]{high}
+\end{DoxyParamCaption}
+)}\hypertarget{class_node_a184f393e8d61eea5e10fd6794cbd9c8d}{}\label{class_node_a184f393e8d61eea5e10fd6794cbd9c8d}
+
+
+Создает узел с заданными пометкой и связями 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em \+\_\+data} & Пометка узла \\
+\hline
+{\em low} & Указатель на младшего потомка \\
+\hline
+{\em high} & Указатель на старшего потомка \\
+\hline
+\end{DoxyParams}
+\index{Node@{Node}!````~Node@{$\sim$\+Node}}
+\index{````~Node@{$\sim$\+Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{$\sim$\+Node()}{~Node()}}]{\setlength{\rightskip}{0pt plus 5cm}Node\+::$\sim$\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_node_aa0840c3cb5c7159be6d992adecd2097c}{}\label{class_node_aa0840c3cb5c7159be6d992adecd2097c}
+
+
+Удаляет узел и связанные с ним узлы 
+
+\begin{DoxyAuthor}{Автор}
+Александр Митюнин 
+\end{DoxyAuthor}
+
+
+\subsection{Методы}
+\index{Node@{Node}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!Node@{Node}}
+\subsubsection[{\texorpdfstring{get\+Data()}{getData()}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Node\+::get\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_node_ab3be314a19ff6049d0ab528ef3122139}{}\label{class_node_ab3be314a19ff6049d0ab528ef3122139}
+
+
+Возвращает строку, содержащую пометку узла 
+
+\begin{DoxyAuthor}{Автор}
+Александр Митюнин 
+\end{DoxyAuthor}
+\index{Node@{Node}!get\+High@{get\+High}}
+\index{get\+High@{get\+High}!Node@{Node}}
+\subsubsection[{\texorpdfstring{get\+High()}{getHigh()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node} $\ast$ Node\+::get\+High (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_node_abf9a87b58ca04ff3c730e2097eee6f19}{}\label{class_node_abf9a87b58ca04ff3c730e2097eee6f19}
+
+
+Возвращает указатель на старшего потомка 
+
+\begin{DoxyAuthor}{Автор}
+Александр Митюнин 
+\end{DoxyAuthor}
+\index{Node@{Node}!get\+Low@{get\+Low}}
+\index{get\+Low@{get\+Low}!Node@{Node}}
+\subsubsection[{\texorpdfstring{get\+Low()}{getLow()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node} $\ast$ Node\+::get\+Low (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_node_adf1eae3c27b3b6fb038f2a677743e4c3}{}\label{class_node_adf1eae3c27b3b6fb038f2a677743e4c3}
+
+
+Возвращает указатель на младшего потомка 
+
+\begin{DoxyAuthor}{Автор}
+Александр Митюнин 
+\end{DoxyAuthor}
+\index{Node@{Node}!set\+Data@{set\+Data}}
+\index{set\+Data@{set\+Data}!Node@{Node}}
+\subsubsection[{\texorpdfstring{set\+Data(\+Q\+String \+\_\+data)}{setData(QString _data)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::set\+Data (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{\+\_\+data}
+\end{DoxyParamCaption}
+)}\hypertarget{class_node_a4ec7f6f38e67963aed6759a782db25a1}{}\label{class_node_a4ec7f6f38e67963aed6759a782db25a1}
+
+
+Изменяет пометку узла на заданную 
+
+\begin{DoxyAuthor}{Автор}
+Александр Митюнин 
+\end{DoxyAuthor}
+\index{Node@{Node}!set\+High\+Connection@{set\+High\+Connection}}
+\index{set\+High\+Connection@{set\+High\+Connection}!Node@{Node}}
+\subsubsection[{\texorpdfstring{set\+High\+Connection(\+Node $\ast$node)}{setHighConnection(Node *node)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::set\+High\+Connection (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{class_node_a77ee961e6ac046ecc4f52e2cea94ad19}{}\label{class_node_a77ee961e6ac046ecc4f52e2cea94ad19}
+
+
+Задает адрес старшего потомка 
+
+\begin{DoxyAuthor}{Автор}
+Александр Митюнин 
+\end{DoxyAuthor}
+\index{Node@{Node}!set\+High\+Connection@{set\+High\+Connection}}
+\index{set\+High\+Connection@{set\+High\+Connection}!Node@{Node}}
+\subsubsection[{\texorpdfstring{set\+High\+Connection(\+Q\+String \+\_\+data)}{setHighConnection(QString _data)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::set\+High\+Connection (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{\+\_\+data}
+\end{DoxyParamCaption}
+)}\hypertarget{class_node_a14d42baec35f7dcbe6273fb4e91132e3}{}\label{class_node_a14d42baec35f7dcbe6273fb4e91132e3}
+
+
+Создает узел с заданной пометкой без связей и назначает его старшим потомком 
+
+\begin{DoxyAuthor}{Автор}
+Александр Митюнин 
+\end{DoxyAuthor}
+\index{Node@{Node}!set\+Low\+Connection@{set\+Low\+Connection}}
+\index{set\+Low\+Connection@{set\+Low\+Connection}!Node@{Node}}
+\subsubsection[{\texorpdfstring{set\+Low\+Connection(\+Node $\ast$node)}{setLowConnection(Node *node)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::set\+Low\+Connection (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{class_node_afd304ef1773b4ee5e75e826c4b7b57b0}{}\label{class_node_afd304ef1773b4ee5e75e826c4b7b57b0}
+
+
+Задает адрес младшего потомка 
+
+\begin{DoxyAuthor}{Автор}
+Александр Митюнин 
+\end{DoxyAuthor}
+\index{Node@{Node}!set\+Low\+Connection@{set\+Low\+Connection}}
+\index{set\+Low\+Connection@{set\+Low\+Connection}!Node@{Node}}
+\subsubsection[{\texorpdfstring{set\+Low\+Connection(\+Q\+String \+\_\+data)}{setLowConnection(QString _data)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::set\+Low\+Connection (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{\+\_\+data}
+\end{DoxyParamCaption}
+)}\hypertarget{class_node_ab8a35e02d194a5f378120db368a22ded}{}\label{class_node_ab8a35e02d194a5f378120db368a22ded}
+
+
+Создает узел с заданной пометкой без связей и назначает его младшим потомком 
+
+\begin{DoxyAuthor}{Автор}
+Александр Митюнин 
+\end{DoxyAuthor}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Alexander/\+Documents/\+B\+D\+D\+\_\+education/node.\+h\item 
+C\+:/\+Users/\+Alexander/\+Documents/\+B\+D\+D\+\_\+education/node.\+cpp\end{DoxyCompactItemize}
