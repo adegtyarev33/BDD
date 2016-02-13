@@ -23,18 +23,6 @@ Node::Node(QString _data, Node *low, Node *high)
 }
 
 /**
- * @brief Удаляет узел и связанные с ним узлы
- * @author Александр Митюнин
- */
-Node::~Node()
-{
-  if (lowConnection)
-    delete(this->lowConnection);
-  if (highConnection)
-    delete(this->highConnection);
-}
-
-/**
  * @brief Задает адрес младшего потомка
  * @author Александр Митюнин
  */

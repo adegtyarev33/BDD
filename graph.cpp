@@ -15,19 +15,11 @@ Graph::Graph()
 
 /**
  * @brief Удаление диаграммы
- * @todo Реализовать алгоритм поиска связей с логическими 0 и 1
- * и их удаления (прим.: эффективность не в приоритете! нужен сам алгоритм!)
+ * @todo Реализовать алгоритм удаления
+ * (прим.: эффективность не в приоритете! нужен сам алгоритм!)
  */
 Graph::~Graph()
 {
-  // ищем связи с low
-  Node *current = root;
-  while (current->getHigh() != low && current->getLow() != low)
-  {
-  }
-
-  //...
-  delete root;
 }
 
 /**
@@ -73,6 +65,4 @@ void Graph::addNode(Node *parent, QString _data, Node *lowConnection,
  */
 void Graph::buildBdd(int values, int variables)
 {
-  int var = variables;
-  int valuesVector = values;
 }

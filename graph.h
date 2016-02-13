@@ -12,6 +12,7 @@ using namespace std;
  * решений,
  * представленная в виде графа
  * @author Александр Митюнин
+ * @todo Создать класс Tree и сделать класс Graph private-наследником
  */
 class Graph
 {
