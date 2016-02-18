@@ -22,6 +22,10 @@ MainWindow::MainWindow(QWidget *parent) :
   showMessage(function->getNumberOfVariables(), false);
   showMessage("Vector of values: ", true);
   showMessage(function->getValues(), false);
+  Graph *graph = new Graph();
+  int _values = function->getValues().toInt();
+  int _variables = function->getNumberOfVariables().unicode() - 48;
+  graph->buildBdd(_values, _variables, graph->getRoot());
 }
 
 MainWindow::~MainWindow()
@@ -44,16 +48,14 @@ void MainWindow::showMessage(QString message, bool newLine)
 Function* MainWindow::generateFunction(unsigned size)
 {
   Function* function = new Function();
-//  QString _formula = "x";
-//  _formula.append(0x2081);
-//  _formula += " & x";
-//  _formula.append(0x2082);
-//  _formula += " | x";
-//  _formula.append(0x2084);
 
-  QString _formula = QString("%1%4 %2 %7(%1%5 %3 %7%1%6)").arg("x").arg("&").
-      arg("|").arg((QChar)0x2081).arg((QChar)0x2082).arg((QChar)0x2083).
-      arg((QChar)0x00AC);
+  QString x1 = QString("x%1").arg((QChar)0x2081);
+  QString x2 = QString("x%1").arg((QChar)0x2082);
+  QString x3 = QString("x%1").arg((QChar)0x2083);
+  QString s_not = QString("%1").arg((QChar)0x00AC);
+  QString _formula = s_not + x1 + "&" + s_not + x2 + "&" + s_not + x3 + "|" + s_not + x1 + "&" +
+      s_not + x2 + "&" + x3 + "|" + s_not + x1 + "&" + x2 + "&" + x3;
+
   function->setFormula(_formula);
 
   //DEBUG

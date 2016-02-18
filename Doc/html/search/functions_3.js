@@ -1,4 +1,11 @@
 var searchData=
 [
-  ['node',['Node',['../class_node.html#ad7a34779cad45d997bfd6d3d8043c75f',1,'Node::Node()'],['../class_node.html#a184f393e8d61eea5e10fd6794cbd9c8d',1,'Node::Node(QString _data, Node *low, Node *high)']]]
+  ['getdata',['getData',['../class_node.html#ab3be314a19ff6049d0ab528ef3122139',1,'Node']]],
+  ['getformula',['getFormula',['../class_function.html#af9036d1aabffcd855c0d3e4981ec7f0a',1,'Function']]],
+  ['gethigh',['getHigh',['../class_node.html#abf9a87b58ca04ff3c730e2097eee6f19',1,'Node']]],
+  ['getlow',['getLow',['../class_node.html#adf1eae3c27b3b6fb038f2a677743e4c3',1,'Node']]],
+  ['getnumberofvariables',['getNumberOfVariables',['../class_function.html#a87ff969fd64a5dcdacdca843a3dc13fb',1,'Function']]],
+  ['getroot',['getRoot',['../class_graph.html#aa706260b27686591003a41c2b8c42644',1,'Graph']]],
+  ['getvalues',['getValues',['../class_function.html#a23aa5c7ecc12e85f6cf7d175394d3a64',1,'Function']]],
+  ['graph',['Graph',['../class_graph.html#ae4c72b8ac4d693c49800a4c7e273654f',1,'Graph']]]
 ];

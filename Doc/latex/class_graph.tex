@@ -12,12 +12,17 @@
 \subsection*{Открытые члены}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph} ()
+\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph} ()\hypertarget{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{}\label{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}
+
 \begin{DoxyCompactList}\small\item\em Инициализация ключевых узлов БДР (0-\/терминальный узел, 1-\/терминальный узел, корень диаграммы) \end{DoxyCompactList}\item 
-\hyperlink{class_graph_a902c5b3eacb66d60752525ab23297a95}{$\sim$\+Graph} ()
+\hyperlink{class_graph_a902c5b3eacb66d60752525ab23297a95}{$\sim$\+Graph} ()\hypertarget{class_graph_a902c5b3eacb66d60752525ab23297a95}{}\label{class_graph_a902c5b3eacb66d60752525ab23297a95}
+
 \begin{DoxyCompactList}\small\item\em Удаление диаграммы \end{DoxyCompactList}\item 
-void \hyperlink{class_graph_a675ba6677488ad224ff32d0fde0644c5}{build\+Bdd} (int values, int variables)
-\begin{DoxyCompactList}\small\item\em Построение БДР булевой функции \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{class_graph_a2a51a5b554d072c8fcfa934cabf08779}{build\+Bdd} (int values, int variables, \hyperlink{class_node}{Node} $\ast$node, int number=1)
+\begin{DoxyCompactList}\small\item\em Построение БДР булевой функции по ее вектору значений \end{DoxyCompactList}\item 
+\hyperlink{class_node}{Node} $\ast$ \hyperlink{class_graph_aa706260b27686591003a41c2b8c42644}{get\+Root} ()\hypertarget{class_graph_aa706260b27686591003a41c2b8c42644}{}\label{class_graph_aa706260b27686591003a41c2b8c42644}
+
+\begin{DoxyCompactList}\small\item\em Возвращает указатель на корень диаграммы \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Подробное описание}
@@ -27,64 +32,35 @@ void \hyperlink{class_graph_a675ba6677488ad224ff32d0fde0644c5}{build\+Bdd} (int 
 Александр Митюнин 
 \end{DoxyAuthor}
 \begin{DoxyRefDesc}{Необходимо сделать}
-\item[\hyperlink{todo__todo000004}{Необходимо сделать}]Создать класс Tree и сделать класс \hyperlink{class_graph}{Graph} private-\/наследником \end{DoxyRefDesc}
-
-
-\subsection{Конструктор(ы)}
-\index{Graph@{Graph}!Graph@{Graph}}
-\index{Graph@{Graph}!Graph@{Graph}}
-\subsubsection[{\texorpdfstring{Graph()}{Graph()}}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+::\+Graph (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{}\label{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}
-
-
-Инициализация ключевых узлов БДР (0-\/терминальный узел, 1-\/терминальный узел, корень диаграммы) 
-
-\begin{DoxyAuthor}{Автор}
-Александр Митюнин 
-\end{DoxyAuthor}
-\index{Graph@{Graph}!````~Graph@{$\sim$\+Graph}}
-\index{````~Graph@{$\sim$\+Graph}!Graph@{Graph}}
-\subsubsection[{\texorpdfstring{$\sim$\+Graph()}{~Graph()}}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+::$\sim$\+Graph (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\hypertarget{class_graph_a902c5b3eacb66d60752525ab23297a95}{}\label{class_graph_a902c5b3eacb66d60752525ab23297a95}
-
-
-Удаление диаграммы 
-
-\begin{DoxyRefDesc}{Необходимо сделать}
-\item[\hyperlink{todo__todo000002}{Необходимо сделать}]Реализовать алгоритм удаления (прим.\+: эффективность не в приоритете! нужен сам алгоритм!) \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000001}{Необходимо сделать}]Добавить функцию построения несокращенной БДР \end{DoxyRefDesc}
 
 
 \subsection{Методы}
 \index{Graph@{Graph}!build\+Bdd@{build\+Bdd}}
 \index{build\+Bdd@{build\+Bdd}!Graph@{Graph}}
-\subsubsection[{\texorpdfstring{build\+Bdd(int values, int variables)}{buildBdd(int values, int variables)}}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+::build\+Bdd (
+\subsubsection[{\texorpdfstring{build\+Bdd(int values, int variables, Node $\ast$node, int number=1)}{buildBdd(int values, int variables, Node *node, int number=1)}}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\+::build\+Bdd (
 \begin{DoxyParamCaption}
 \item[{int}]{values, }
-\item[{int}]{variables}
+\item[{int}]{variables, }
+\item[{{\bf Node} $\ast$}]{node, }
+\item[{int}]{number = {\ttfamily 1}}
 \end{DoxyParamCaption}
-)}\hypertarget{class_graph_a675ba6677488ad224ff32d0fde0644c5}{}\label{class_graph_a675ba6677488ad224ff32d0fde0644c5}
+)}\hypertarget{class_graph_a2a51a5b554d072c8fcfa934cabf08779}{}\label{class_graph_a2a51a5b554d072c8fcfa934cabf08779}
 
 
-Построение БДР булевой функции 
+Построение БДР булевой функции по ее вектору значений 
 
-\begin{DoxyAuthor}{Автор}
-Александр Митюнин 
-\end{DoxyAuthor}
 
 \begin{DoxyParams}{Аргументы}
 {\em values} & Вектор значений функции в форме машинного слова \\
 \hline
-{\em variables} & Количество переменных функции\\
+{\em variables} & Число переменных \\
+\hline
+{\em node} & Корень диаграммы \\
+\hline
+{\em number} & Индекс текущей переменной \\
 \hline
 \end{DoxyParams}
-\begin{DoxyRefDesc}{Необходимо сделать}
-\item[\hyperlink{todo__todo000003}{Необходимо сделать}]Написать функцию \end{DoxyRefDesc}
 
 
 Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}

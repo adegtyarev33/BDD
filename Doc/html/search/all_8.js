@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['Список_20задач',['Список задач',['../todo.html',1,'']]]
+  ['_7egraph',['~Graph',['../class_graph.html#a902c5b3eacb66d60752525ab23297a95',1,'Graph']]]
 ];

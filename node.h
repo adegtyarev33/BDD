@@ -12,6 +12,7 @@ class Node
 public:
   Node();
   Node(QString _data, Node *low, Node *high);
+  ~Node();
   QString getData();
   void setData(QString _data);
   void setLowConnection(Node *node); //!< Задает адрес младшего потомка
@@ -20,6 +21,7 @@ public:
   void setHighConnection(QString _data);
   Node* getHigh();
   Node* getLow();
+  void delink(Node *address);
 
 private:
   QString data;

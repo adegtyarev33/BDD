@@ -16,7 +16,8 @@ void Function::calculateValues()
   int value = 0;
   values = 0;
   findVariables();
-  for (int i = 0; i < (1 << (numberOfVariables.unicode() - 48)); ++i)
+  int length = 1 << (numberOfVariables.unicode() - 48);
+  for (int i = length - 1; i >= 0; --i)
   {
     QString substitution = substitute(formula, i);
     int position = 0;
@@ -27,7 +28,7 @@ void Function::calculateValues()
       reduceSubstitution(substitution, position);
     }
     value = (substitution == "0") ? 0 : 1;
-    values = values | ((value << i) >> 1);
+    values = values | (value << (length - i - 1));
   }
 }
 
@@ -50,7 +51,6 @@ void Function::findVariables()
  * @param str Формула функции
  * @param value Значение набора переменных
  * @return функцию вида str(value[1], ... value[n])
- * @todo Улучшить удобочитаемость функции добавлением вспомогательных переменных
  */
 QString Function::substitute(QString str, int value)
 {
@@ -283,9 +283,9 @@ QString Function::getValues()
   QString vect;
   QChar symbol;
   int limit = 1 << ((int)numberOfVariables.unicode() - 48);
-  for (int i = 0; i < limit; ++i)
+  for (int i = limit - 1; i >= 0; --i)
   {
-    symbol = ( ((values >> (i - 1)) & 0x1) ) ? '1' : '0';
+    symbol = ( ((values >> i) & 0x1) ) ? '1' : '0';
     vect.append(symbol);
   }
   return vect;

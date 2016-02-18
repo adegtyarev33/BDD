@@ -12,14 +12,15 @@ using namespace std;
  * решений,
  * представленная в виде графа
  * @author Александр Митюнин
- * @todo Создать класс Tree и сделать класс Graph private-наследником
  */
 class Graph
 {
 public:
   Graph();
   ~Graph();
-  void buildBdd(int values, int variables);
+
+  void buildBdd(int values, int variables, Node *node, int number = 1);
+  Node *getRoot() {return root;} //!< Возвращает указатель на корень диаграммы
 
 private:
   Node *root; // корень диаграммы

@@ -22,9 +22,16 @@ Node::Node(QString _data, Node *low, Node *high)
   setHighConnection(high);
 }
 
+Node::~Node()
+{
+  if (lowConnection)
+    delete lowConnection;
+  if (highConnection)
+    delete highConnection;
+}
+
 /**
  * @brief Задает адрес младшего потомка
- * @author Александр Митюнин
  */
 void Node::setLowConnection(Node *node)
 {
@@ -34,7 +41,6 @@ void Node::setLowConnection(Node *node)
 /**
  * @brief Создает узел с заданной пометкой без связей и назначает
  * его младшим потомком
- * @author Александр Митюнин
  */
 void Node::setLowConnection(QString _data)
 {
@@ -43,7 +49,6 @@ void Node::setLowConnection(QString _data)
 
 /**
  * @brief Задает адрес старшего потомка
- * @author Александр Митюнин
  */
 void Node::setHighConnection(Node *node)
 {
@@ -53,7 +58,6 @@ void Node::setHighConnection(Node *node)
 /**
  * @brief Создает узел с заданной пометкой без связей и назначает
  * его старшим потомком
- * @author Александр Митюнин
  */
 void Node::setHighConnection(QString _data)
 {
@@ -62,7 +66,6 @@ void Node::setHighConnection(QString _data)
 
 /**
  * @brief Возвращает указатель на старшего потомка
- * @author Александр Митюнин
  */
 Node* Node::getHigh()
 {
@@ -71,7 +74,6 @@ Node* Node::getHigh()
 
 /**
  * @brief Возвращает указатель на младшего потомка
- * @author Александр Митюнин
  */
 Node* Node::getLow()
 {
@@ -80,7 +82,6 @@ Node* Node::getLow()
 
 /**
  * @brief Возвращает строку, содержащую пометку узла
- * @author Александр Митюнин
  */
 QString Node::getData()
 {
@@ -89,9 +90,25 @@ QString Node::getData()
 
 /**
  * @brief Изменяет пометку узла на заданную
- * @author Александр Митюнин
  */
 void Node::setData(QString _data)
 {
   data = _data;
+}
+
+/**
+ * @brief Удаление связей с заданным узлом
+ * @param address Указатель на узел, связи с которым должны быть удалены
+ */
+void Node::delink(Node *address)
+{
+  if (lowConnection == address)
+    lowConnection = nullptr;
+  if (highConnection == address)
+    highConnection = nullptr;
+
+  if (lowConnection)
+    lowConnection->delink(address);
+  if (highConnection)
+    highConnection->delink(address);
 }
